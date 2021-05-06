@@ -29,4 +29,6 @@ MongoClient.connect(url, function(err, db) {
 	
 	db.classes.insert({ CRN: 13460, Department: "IT", CourseNum: 635, Professor: "Tolboom" });
 	db.classes.insert({ CRN: 13461, Department: "IT", CourseNum: 640, Professor: "Senesy" });
-}
+	
+	db.close();
+};
