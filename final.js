@@ -16,7 +16,7 @@ db.createCollection("classes", {
 				},
 				CourseNum: {
 					bsonType: "int",
-					description: "Course Number (Ex. IT635 is 635)
+					description: "Course Number (Ex. IT635 is 635)"
 				},
 				Professor: {
 					bsonType: "string",
@@ -27,8 +27,8 @@ db.createCollection("classes", {
 	}
 });
 
-db.classes.insert( { CRN: 13460, Department: "IT", CourseNum: 635, Professor: "Tolboom" } );
-db.classes.insert( { CRN: 13461, Department: "IT", CourseNum: 640, Professor: "Senesy" } );
+db.classes.insertOne( { CRN: NumberInt(13460), Department: "IT", CourseNum: NumberInt(635), Professor: "Tolboom" } );
+db.classes.insertOne( { CRN: NumberInt(13461), Department: "IT", CourseNum: NumberInt(640), Professor: "Senesy" } );
 
 db.createCollection("assignments", {
 	validator: {
@@ -55,8 +55,8 @@ db.createCollection("assignments", {
 	}
 });
 
-db.assignments.insert( { CRN: 13460, Title: "Exercise 1", DueDate: "2021-05-04" } );
-db.assignments.insert( { CRN: 13461, Title: "Install Server", DueDate: "2021-02-05" } );
+db.assignments.insertOne( { CRN: NumberInt(13460), Title: "Exercise 1", DueDate: "2021-05-04" } );
+db.assignments.insertOne( { CRN: NumberInt(13461), Title: "Install Server", DueDate: "2021-02-05" } );
 
 db.createCollection("resources", {
 	validator: {
@@ -84,5 +84,5 @@ db.createCollection("resources", {
 	}
 });
 
-db.resources.insert( { CRN: 13460, Type: "website", FilePath: "njit.instructure.com" } );
-db.resources.insert( { CRN: 13461, Type: "notes", FilePath: "Google Drive/IT640/lecture1" } );
+db.resources.insertOne( { CRN: NumberInt(13460), Type: "website", FilePath: "njit.instructure.com" } );
+db.resources.insertOne( { CRN: NumberInt(13461), Type: "notes", FilePath: "Google Drive/IT640/lecture1" } );
