@@ -11,10 +11,10 @@ MongoClient.connect(url, function(err, db) {
 				required: ["CRN", "Department", "CourseNum", "Professor"],
 				properties: {
 					CRN: {
-						bsonType: "int"
-					}
+						bsonType: "int",
+					},
 					Department: {
-						bsonType: "string"
+						bsonType: "string",
 					},
 					CourseNum: {
 						bsonType: "int",
